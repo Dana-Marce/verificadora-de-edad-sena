@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="page_container">
+        <h1 style="color: blueviolet;">VERIFICADORA DE EDAD</h1>
+        <h2>Prueva tecnica por Danna Marcela Sánchez Pérez</h2>
+        <br>
+        <img class="logo_img" src="img/profile.jpeg">
+        <br>
+        <h2>ingrese su edad por favor</h2>
+        <input class="age_box" type="number" name="age" id="age" min="1" max="120" value="1" />
+        <br>
+        <br>
+        <button class="verify_button" onclick="test()">VERIFICAR</button>   
+        <p class="answer_box" id="answer_box1">
+            <span id="answer_span_text" style="color: white;">esperando su respuesta</span>
+        </p>
+        <br>
+        <a href="_blank" target="_blank">Mira el html en github</a>
+        <a href="_blank" target="_blank">Mira el Css en github</a>
+        <br>
+    </div>
+    
+</body>
+
+<script>
+
+    document.getElementById("age").addEventListener("input", function(){
+    if (this.value > 120) this.value = 120;
+    if (this.value < 1) this.value = 1;
+    });   
+
+    function test(){
+        const age = document.getElementById("age").value;
+        const span = document.querySelector("#answer_box1 span");
+
+        <!-- verificacion adicional no deberia ser posible en uso normal -->
+        if(age <= 0){
+            span.textContent = "Esto no deberia ser posible";
+            span.style.color = "yellow";
+        }
+        else if (age >= 18) {
+            span.textContent = "Eres mayor de edad";
+            span.style.color = "green";
+        }else {
+            span.textContent = "Eres menor de edad";
+            span.style.color = "red";
+        }
+    }   
+</script>
+</html>

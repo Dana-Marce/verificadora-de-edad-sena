@@ -1,0 +1,96 @@
+body{
+    font-family: 'Poppins',Arial,sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height:  100vh;
+    background: linear-gradient(135deg,rgb(89, 226, 71) 10%,pink 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_container{
+    background-color: rgb(92, 92, 92);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 10px 10px;
+    min-height: 100;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#age::-webkit-outer-spin-button,
+#age::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+#age {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.logo_img{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 5px solid transparent;
+    background: linear-gradient(white,white) padding-box,
+                linear-gradient(135deg, #6a11cb, #2575fc) border-box;
+    box-shadow: 0 8px 20px rgba(106,17,203,0.35);
+    transition: transform 0.3s ease;
+}
+
+.age_box{
+    background: pink;
+    max-width: 60px;
+    max-height: 50px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.verify_button{
+    min-width: 100px;
+    min-height: 50px;
+    background: rgb(89, 226, 71);
+}
+
+.answer_box {
+    margin: 30px auto;
+    min-height: 100px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(66, 66, 66);
+}   
+
+h1{
+    -webkit-text-stroke: 6px black;
+    paint-order: stroke fill;
+}
+
+#answer_span_text{
+    -webkit-text-stroke: 6px black;
+    paint-order: stroke fill;
+}
+
+a{
+    display: inline-block; /* Asegura el correcto funcionamiento de transform */
+    background: linear-gradient(135deg,rgb(89, 226, 71) 10%,pink 100%);
+    color: black;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(2, 2, 2, 0.918);
+    transition: transform 0.3s ease;
+}
+
+a:hover{
+    transform: translateY(-8px);
+}
